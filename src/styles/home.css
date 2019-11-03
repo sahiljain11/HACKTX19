@@ -1,4 +1,6 @@
 .App {
+    background: url("../assets/large-area-bk.PNG") no-repeat center center;
+
     min-height: 100vh;
     text-align: center;
     font-size: calc(10px + 2vmin);

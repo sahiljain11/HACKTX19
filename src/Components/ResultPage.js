@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/App.css';
+import '../styles/home.css';
 
 export default props =>
     props.images.map((image, i) =>
