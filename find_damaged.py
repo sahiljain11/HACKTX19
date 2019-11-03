@@ -7,6 +7,9 @@ Created on Sun Nov  3 00:39:23 2019
 import requests
 from PIL import Image
 from azure.cognitiveservices.vision.customvision.prediction import CustomVisionPredictionClient
+from flask import Flask, request, Response
+import json
+import numpy as np
 endpoint = 'https://image-classification.cognitiveservices.azure.com/'
 prediction_key = 'ba8e403c3f904d85adf408928b13fa90'
 predictor = CustomVisionPredictionClient(prediction_key, endpoint=endpoint)
@@ -16,6 +19,10 @@ project_id = '2744fc95-61ce-4f3a-a4d6-e0fad1647c9c'
 
 BIG_IMAGE_SCALE_VALUE = 4
 MIN_BOX_SIZE = 5       #10x10
+ 
+application = Flask(__name__)
+@application.route('/')
+@application.route('/find_damage',methods=['POST'])
 
 def generateBox(satellite_image, x_size, y_size):
     scale = 5
@@ -36,7 +43,8 @@ def generateBox(satellite_image, x_size, y_size):
         result.append(row)
     return result
 
-def get_array(image):
+def find_damage():
+    image = request.files['file']
     result = []
     pil_image = Image.frombytes(image)
     x,y = pil_image.size
@@ -54,6 +62,15 @@ def get_array(image):
             else:
                 row.append(False)
         result.append(row)
-    return result
+    return create_response(result)
+
+def create_response(result):
+    return {
+        'statusCode': '200',
+        'body': json.dumps(result),
+        'headers': {
+            'Content-Type': 'application/json',
+        }
+    }
 
             
