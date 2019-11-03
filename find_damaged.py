@@ -7,10 +7,6 @@ Created on Sun Nov  3 00:39:23 2019
 import requests
 from PIL import Image
 from azure.cognitiveservices.vision.customvision.prediction import CustomVisionPredictionClient
-from flask import Flask, request, Response
-import json
-import numpy as np
-import os
 endpoint = 'https://image-classification.cognitiveservices.azure.com/'
 prediction_key = 'ba8e403c3f904d85adf408928b13fa90'
 predictor = CustomVisionPredictionClient(prediction_key, endpoint=endpoint)
@@ -26,24 +22,14 @@ app =  Flask(__name__)
 
 @app.route('/find',methods=['POST'])
 
-def find_damage():
-    result_matrix = []
-    if request.files['file'] is None:
-        return "no file"
-    file = request.files['file']
-    return "getting file"
-
-    file.save(file.filename)
-
-    pil_image = Image.open(file.filename)
-
+def find_damage(filename):
+    pil_image = Image.open(filename)
     x,y = pil_image.size
-
     image_names = generateBox(pil_image,x,y)
     for row in image_names[0:-1]:
         row_result = []
         for name in row[0:-1]: 
-            result = predictor.classify_image(project_id,'Iteration3',open(name,'rb').read())
+            result = predictor.classify_image(project_id,'Iteration4',open(name,'rb').read())
             for prediction in result.predictions:
                 damaged_probability = 0.0
                 if prediction.tag_name == 'damaged':
@@ -53,7 +39,7 @@ def find_damage():
             else:
                 row_result.append("undamaged")
         result_matrix.append(row_result)
-    return create_response(result_matrix)
+    return result_matrix
 
 
 def generateBox(satellite_image, x_size, y_size):
@@ -72,17 +58,3 @@ def generateBox(satellite_image, x_size, y_size):
                 i+=1
         result.append(row)
     return result
-
-def create_response(result):
-    return (
-        '200',
-        json.dumps(result),
-        {
-            'Content-Type': 'application/json'}
-        )
-    
-
-if __name__ == "__main__":
-    app.run(debug = True)
-
-            
