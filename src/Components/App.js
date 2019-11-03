@@ -7,22 +7,14 @@ class App extends React.Component {
 
     state = {
         uploading: false,
-        received: false,
-        image: null,
-        classification: [
-            true, true, false, false, true,
-            true, false, false, false, false,
-            true, false, false, false, false,
-            false, false, true, true, false,
-            true, false, false, true, false
-        ]
+        received: false
     }
 
     onChange = e => {
-        const files = Array.from(e.target.files)
-        this.setState({uploading: true})
+        const files = Array.from(e.target.files);
+        this.setState({uploading: true});
 
-        const formData = new FormData()
+        const formData = new FormData();
         //
         // formData.append("0", files[0])
         // console.log(files[0])
@@ -50,7 +42,7 @@ class App extends React.Component {
             body: formData
         }).then(data => {
             console.log(data)
-        })
+        });
 
         this.setState({
             uploading: false,

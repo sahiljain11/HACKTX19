@@ -19,10 +19,5 @@ export default props =>
                    alt={"arial photo input"} onChange={props.onChange} required/>
             <label htmlFor="file" className={"Input-name"}
             >Choose a file</label>
-            
-            {/*<Link to={"/result"}>Link test here</Link>*/}
-            <input type={"submit"} className={"Input-name"}/>
-            {/*<input type="file" name="pic" id="pic" accept={"image/*"}/>*/}
-            {/*<label htmlFor="file">Choose a file</label>*/}
         </div>
     </form>
