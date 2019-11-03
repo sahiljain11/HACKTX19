@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="785b81cc-67e9-4fb1-8f17-bc0daefb9701" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/DataDisplay.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Overlay.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/results.css" afterDir="false" />
+    <list default="true" id="785b81cc-67e9-4fb1-8f17-bc0daefb9701" name="Default Changelist" comment="data-display in progress">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ResultPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ResultPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/DataDisplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/DataDisplay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Overlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Overlay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/results.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/results.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572773674393</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="data-display in progress">
+      <created>1572786486494</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572786486495</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +152,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="aaaaahhhh" />
     <MESSAGE value="restructures" />
-    <option name="LAST_COMMIT_MESSAGE" value="restructures" />
+    <MESSAGE value="data-display in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="data-display in progress" />
   </component>
 </project>

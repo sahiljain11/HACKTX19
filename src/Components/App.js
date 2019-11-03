@@ -45,13 +45,12 @@ class App extends React.Component {
         //         })
         //     })
 
-        // fetch('http://localhost:5000/upload', {
-        //     method: 'POST',
-        //     body: formData
-        // }).then(res => res.json())
-        //     .then(data => {
-        //         console.log(data)
-        //     })
+        fetch('http://localhost:5000/upload', {
+            method: 'POST',
+            body: formData
+        }).then(data => {
+            console.log(data)
+        })
 
         this.setState({
             uploading: false,
@@ -60,8 +59,15 @@ class App extends React.Component {
         })
     }
 
+    falsifyUploadReceive() {
+        this.setState({
+            uploading: false,
+            receiving: false
+        })
+    }
+
     render() {
-        const {uploading, received, image, classification} = this.state
+        const {uploading, received, image, classification} = this.state;
 
         const content = () => {
             switch (true) {
