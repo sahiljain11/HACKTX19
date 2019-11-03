@@ -1,0 +1,12 @@
+<<<<<<< HEAD
+azure-functions
+=======
+Click==7.0
+Flask==1.1.1
+itsdangerous==1.1.0
+Jinja2==2.10.3
+MarkupSafe==1.1.1
+Werkzeug==0.16.0
+requests==2.22.0
+Pillow==6.2.1
+>>>>>>> 7e688001e60fb94564fa0056b7698e8437a128c8

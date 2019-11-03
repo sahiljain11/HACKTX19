@@ -1,0 +1,2 @@
+URL: https://image-classification.cognitiveservices.azure.com/customvision/v3.0/Prediction/2744fc95-61ce-4f3a-a4d6-e0fad1647c9c/classify/iterations/Iteration3/url
+Prediction Key: ba8e403c3f904d85adf408928b13fa90

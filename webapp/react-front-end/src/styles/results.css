@@ -1,0 +1,17 @@
+.App-Secondary {
+    /*background: white;*/
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*justify-items: center;*/
+}
+
+.overlay-image {
+    max-width: 90vw;
+    max-height: 90vh;
+    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+}

@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.7
+
+artifacts:
+  type: zip
+  files:
+    - 'requirements.txt'
+    - 'find_damaged.py'
+  base-directory: elasticbeanstalk
