@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Result from './ResultPage';
-import * as serviceWorker from './serviceWorker';
+import './styles/index.css';
+import Result from './Components/ResultPage';
+import * as serviceWorker from './Components/serviceWorker';
 
 // console.log("result is loaded")
 ReactDOM.render(<Result />, document.getElementById('root'));

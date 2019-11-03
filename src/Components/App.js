@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import '../styles/App.css';
 import Form from "./Form";
 
 class App extends React.Component {
@@ -21,7 +21,7 @@ class App extends React.Component {
         // console.log(files[0])
         fetch(`${"https://image-classification.cognitiveservices.azure.com/customvision/v3.0/Prediction/2744fc95-61ce-4f3a-a4d6-e0fad1647c9c/classify/iterations/Iteration3/url"}`, {
             method: 'POST',
-            body: 'https://cbsnews1.cbsistatic.com/hub/i/2018/09/12/96f981d8-2b5f-4bde-a092-8ea3aa621af9/florence3.jpg',
+            body: {"Url": "https://cbsnews1.cbsistatic.com/hub/i/2018/09/12/96f981d8-2b5f-4bde-a092-8ea3aa621af9/florence3.jpg"},
             'Prediction-Key': 'ba8e403c3f904d85adf408928b13fa90',
             'Content-Type': 'application/json'
         })
@@ -29,9 +29,7 @@ class App extends React.Component {
             .then(data => {
                 console.log(data)
                 this.setState({
-                    received: true,
-                    prediction: 0,
-                    classification: ""
+                    received: true
                 })
             })
     }
