@@ -32,7 +32,7 @@ def generateBox(satellite_image, x_size, y_size):
     return result
 
 def find_damage(image):
-    pil_image = image
+    pil_image = Image.open(image)
     x,y = pil_image.size
     image_names = generateBox(pil_image,x,y)
     result_matrix = []
@@ -71,8 +71,3 @@ def combineimage(section_matrix,damage_matrix,total_x,total_y):
         new_image.paste(new_row,(0,y))
         y+=y_size
     return new_image
-            
-
-with Image.open("C:\\Users\\Danie\\hacktx2019training2\\post_damage\\hurricane-florence_00000001_post_disaster.png") as image:
-    result = find_damage(image)
-    result.save('anewimage.png')
