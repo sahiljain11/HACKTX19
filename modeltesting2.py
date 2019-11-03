@@ -45,9 +45,9 @@ def find_damage(image):
                 if prediction.tag_name == 'damaged':
                     damaged_probability = prediction.probability
             if damaged_probability > 0.5:
-                row_result.append("damaged")
+                row_result.append(True)
             else:
-                row_result.append("undamaged")
+                row_result.append(False)
         result_matrix.append(row_result)
     return result_matrix
 
